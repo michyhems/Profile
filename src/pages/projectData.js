@@ -3,6 +3,7 @@ export const projectData = [
         title: "Personal Profile",
         thumbnail: require("./images/user.png"),
         source: "#",
+        gitRepo: "https://github.com/michyhems/Profile/tree/master",
         description:
             "A custum profile to display my expertise and design skills.",
     },
@@ -10,6 +11,7 @@ export const projectData = [
         title: "Sudoku",
         thumbnail: require("./images/sadokuIcon.png"),
         source: "https://michyhems.github.io/Sudoku/",
+        gitRepo: "https://github.com/michyhems/Sudoku/tree/master",
         description:
             "I developed an interest in the brain teaser game, Sadoku. I wanted to see if I could build it.",
     },
@@ -17,6 +19,7 @@ export const projectData = [
         title: "3D Tooth Surgery",
         thumbnail: require("./images/tooth.png"),
         source: "https://youtu.be/fgLgKa1RRfw",
+        gitRepo: "",
         description:
             "While the skillset that this project showcases is not necessarily universal, it does represent my" +
             " ability to learn new technologies and adapt to the given situation. As I said in the Experience section," +
@@ -26,6 +29,7 @@ export const projectData = [
         title: "Essay on Prototype-Oriented Programming",
         thumbnail: require("./images/research.png"),
         source: "https://drive.google.com/file/d/1rs7A6NWjWMnoefbN3Kkhq25zPEHB2mQs/view?usp=sharing",
+        gitRepo: "",
         description:
             "In my final year of University I was tasked with writing a ten page essay on a topic of my choice." +
             " The only restriction being that it could not be a 'regurgitation of the internet'." +

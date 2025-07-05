@@ -25,8 +25,13 @@ const Projects = () => {
                             <h2>{proj.title}</h2>
                             <p>{proj.description}</p>
                             <a href={proj.source} target="_blank">
-                                <p class="seeMore">View.</p>
+                                <p class="seeMore">View</p>
                             </a>
+                            {proj.gitRepo !== "" ? (
+                                <a href={proj.gitRepo} target="_blank">
+                                    <p>See source code in Git.</p>
+                                </a>
+                            ) : null}
                         </div>
                     </li>
                 ))}
