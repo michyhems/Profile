@@ -8,6 +8,13 @@ export const projectData = [
             "A custum profile to display my expertise and design skills.",
     },
     {
+        title: "Sorting Visualiser",
+        thumbnail: require("./images/sortingalg.png"),
+        source: "https://michyhems.github.io/SortingVisualiser/",
+        gitRepo: "https://github.com/michyhems/SortingVisualiser/tree/master",
+        description: "A sorting algorithm visualiser.",
+    },
+    {
         title: "Sudoku",
         thumbnail: require("./images/sadokuIcon.png"),
         source: "https://michyhems.github.io/Sudoku/",
