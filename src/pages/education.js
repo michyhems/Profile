@@ -4,6 +4,9 @@ const Education = () => {
             <div class="container">
                 <h2>Bachelor of Mathematics / Bachelor of IT (Dual Degree)</h2>
                 <h3>Queensland University of Technology</h3>
+                <a href="https://drive.google.com/file/d/1PB0zrDWFUBNLJjDCqiBNyirnK1wz1keo/view?usp=sharing">
+                    <p>See certificate</p>
+                </a>
                 <h2>Highschool Diploma</h2>
                 <h3>Siena Catholic College</h3>
                 <h2>Extracurricular Certifications</h2>

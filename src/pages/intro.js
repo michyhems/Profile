@@ -10,13 +10,12 @@ const Introduction = () => {
                     <h2>Hemble Michael</h2>
                     <p>Sunshine Coast | michyhems@gmail.com</p>
                     <p class="introPara">
-                        I’m an IT professional with a Bachelor’s degree in IT
-                        and Mathematics. I have a vast amount of experience with
-                        regards to problem solving, working in diverse teams and
-                        building IT systems. Writing professional project
-                        management reports, indepth research in unfamiliar
-                        topics and an ability to learn and adapt quickly are
-                        also skills that I have developed during my studies.
+                        I’m an IT professional with a Bachelor’s degree in
+                        Information Technologies and Mathematics. I love problem
+                        solving and building web applications with React and
+                        Node.js. I am familiar with a large body of programming
+                        languages and am capable of adapting to any and all
+                        situations with a clear and calm disposition.
                     </p>
                     <h3>Skills</h3>
                     <p>

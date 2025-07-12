@@ -12,7 +12,7 @@ export const projectData = [
         thumbnail: require("./images/sortingalg.png"),
         source: "https://michyhems.github.io/SortingVisualiser/",
         gitRepo: "https://github.com/michyhems/SortingVisualiser/tree/master",
-        description: "A sorting algorithm visualiser.",
+        description: "A sorting visualiser.",
     },
     {
         title: "Sudoku",
