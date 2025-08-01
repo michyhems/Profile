@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { projectData } from "./projectData";
-import sadokuIcon from "./images/sadokuIcon.png";
-import profileIcon from "./images/user.png";
 
 const Projects = () => {
     const [projectList, setProjectList] = useState([]);
-    const icons = [profileIcon, sadokuIcon, sadokuIcon, sadokuIcon];
+
+    //declare imported data as a state variable
     useEffect(() => {
         let newProject = [];
         projectData.map((data) => {
@@ -16,36 +15,55 @@ const Projects = () => {
 
     return (
         <>
-            <ul class="projectList">
-                {projectList.map((proj) => (
-                    <li class="listItem">
-                        <img class="thumbnail" src={proj.thumbnail}></img>
+            <section>
+                {/**Looping over each data entry and generating a list item from it. */}
+                <ul class="projectList">
+                    {projectList.map((proj) => (
+                        //list item container
+                        <li class="listItem">
+                            {/**Project thumbnail */}
+                            <img class="thumbnail" src={proj.thumbnail}></img>
 
-                        <div class="content">
-                            <h2>{proj.title}</h2>
-                            <p>{proj.description}</p>
-                            <a href={proj.source} target="_blank">
-                                <p class="seeMore">View</p>
-                            </a>
-                            {proj.gitRepo !== "" ? (
-                                <a href={proj.gitRepo} target="_blank">
-                                    <p>See source code in Git.</p>
+                            {/**Project description and links */}
+                            <div class="content">
+                                <h2>{proj.title}</h2>
+                                <p>{proj.description}</p>
+
+                                {/**Project Links */}
+                                <a href={proj.source} target="_blank">
+                                    <p class="seeMore">
+                                        Click here to view project.
+                                    </p>
                                 </a>
-                            ) : null}
-                        </div>
-                    </li>
-                ))}
-            </ul>
-            <p>
-                Profile image by{" "}
-                <a
-                    style={{ color: "blue" }}
-                    href="https://www.flaticon.com/authors/md-tanvirul-haque"
-                    target="_blank"
-                >
-                    Md Tanvirul Haque
-                </a>
-            </p>
+
+                                {/**Not all projects have a GitHub repository and so a turnary statement is used to display the link
+                                 * only if it exists.
+                                 */}
+                                {proj.gitRepo !== "" ? (
+                                    <a href={proj.gitRepo} target="_blank">
+                                        <p>
+                                            Click here to see source code in
+                                            GitHub.
+                                        </p>
+                                    </a>
+                                ) : null}
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+
+                {/**Image reference */}
+                <p>
+                    Profile image by{" "}
+                    <a
+                        style={{ color: "blue" }}
+                        href="https://www.flaticon.com/authors/md-tanvirul-haque"
+                        target="_blank"
+                    >
+                        Md Tanvirul Haque
+                    </a>
+                </p>
+            </section>
         </>
     );
 };

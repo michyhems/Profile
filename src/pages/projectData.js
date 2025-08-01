@@ -20,12 +20,12 @@ export const projectData = [
         source: "https://michyhems.github.io/Sudoku/",
         gitRepo: "https://github.com/michyhems/Sudoku/tree/master",
         description:
-            "I developed an interest in the brain teaser game, Sadoku. I wanted to see if I could build it.",
+            "I developed an interest in the brain teaser game, Sadoku. I wanted to see if I could build it and apply a novel idea for toggling dark mode.",
     },
     {
         title: "3D Tooth Surgery",
         thumbnail: require("./images/tooth.png"),
-        source: "https://youtu.be/fgLgKa1RRfw",
+        source: "https://www.youtube.com/watch?v=fgLgKa1RRfw",
         gitRepo: "",
         description:
             "While the skillset that this project showcases is not necessarily universal, it does represent my" +
@@ -41,6 +41,6 @@ export const projectData = [
             "In my final year of University I was tasked with writing a ten page essay on a topic of my choice." +
             " The only restriction being that it could not be a 'regurgitation of the internet'." +
             " It had to be our own words and display our own understanding of the research we conducted." +
-            " This essay shows my ability to communicate complex ideas clearly and and effectively in the written form.",
+            " This essay shows my ability to communicate complex ideas clearly and effectively in the written form.",
     },
 ];
