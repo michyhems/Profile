@@ -1,4 +1,4 @@
-const allowedOrigins = ["https://michyhems.github.io/Profile/"];
+const allowedOrigins = ["https://michyhems.github.io"];
 const corsOptions = {
     origin: (origin, callback) => {
         if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
