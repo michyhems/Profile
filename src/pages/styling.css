@@ -29,20 +29,54 @@ body{
 
 nav{
     background-color: var(--navColour);
-    min-width: 300px;
-    font-size: 2em;
+    width: 300px;
+    font-size: 1.5em;
     padding-right: 10px;
     border-right: solid 1px var(--borderColour);
     text-align: left;
     height: 100vh;
     position: sticky;
+    transition: 300ms ease-in-out;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+nav.close{
+    padding-right: 5px;
+    width: 56px;
 }
 
-nav >ul> li{
+nav >ul> li >a{
     margin: 10px;
+    padding: 0.25em;
     display: flex;
     align-items: center;
     gap: 1em;
+}
+
+nav >ul> li >a > span{
+    flex-grow: 1;
+}
+
+svg{
+    min-width: 24px;
+}
+
+svg:hover{
+    cursor: pointer;
+}
+.logo{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+}
+
+.logo svg{
+    rotate: 180deg;
+    transition: 200ms ease;
+}
+
+.logo svg.rotate{
+    transform: rotate(180deg);
 }
 
 /*targets active elements of the sidenav*/
@@ -159,10 +193,17 @@ main{
 /*  Education Content*/
 .educationContainer{
     display: grid;
-    width: 90%;
+    width: 100%;
+    height: 100%;
     grid-template-columns: repeat(auto-fit, 300px);
     justify-content: center;
+    align-items: center;
     gap: 2em;
+    overflow: scroll;
+}
+
+.educationContainer::-webkit-scrollbar {
+  display: none;
 }
 
 
@@ -242,17 +283,13 @@ main{
 }
 
 
-
-
-
-
 /*  Experience Content  */
 
 section{
     height: 100vh;
+    align-items: center;
     overflow: scroll;
     view-timeline-name: --section;
-    align-items: center;
 }
 section::-webkit-scrollbar{
     display: none;
@@ -288,8 +325,8 @@ section h1{
 
 .kidding{
     animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0;
+    animation-timeline: view() !important;
+    animation-range: entry 0 !important;
 }
 
 @keyframes blink {
@@ -415,12 +452,13 @@ section h1{
 
 .capTitle::before{
     background-color: var(--bgColour);
-    animation: type;
-    animation-timeline: --section;
-    animation-range: 0;
+    animation: type forwards;
+    animation-timeline: --section !important;
+    animation-range: entry 0;
 }
 
 @keyframes type{
+
     to{
         left: 125%;
     }
@@ -443,8 +481,8 @@ section h1{
     font-size: 1.5em;
     font-weight: 400;
     animation: emerge linear;
-    animation-timeline: --section;
-    animation-range: entry 0 cover 50%;
+    animation-timeline: --section !important;
+    animation-range: entry 0 cover 50% !important;
 }
 
 @keyframes emerge{
@@ -459,8 +497,8 @@ section h1{
 
 .defRef{
     animation: rise linear;
-    animation-timeline: --section;
-    animation-range: entry 0 cover 50%;
+    animation-timeline: --section !important;
+    animation-range: entry 0 cover 50% !important;
 }
 
 @keyframes rise{
@@ -489,8 +527,8 @@ section h1{
     img{
         opacity: 0;
         animation: toRight linear forwards;
-        animation-timeline: --section;
-        animation-range: entry 10% cover 35%;
+        animation-timeline: --section !important;
+        animation-range: entry 45% cover 35% !important;
     }
     div{
         opacity: 0;
@@ -500,8 +538,8 @@ section h1{
         align-items: center;
         text-align: left;
         animation: toLeft linear forwards;
-        animation-timeline: --section;
-        animation-range: entry 10% cover 35%;
+        animation-timeline: --section !important;
+        animation-range: entry 45% cover 35% !important;
     }
 }
 
@@ -610,6 +648,7 @@ section h1{
     display: grid;
     grid-template-columns: 200px 1fr;
     grid-template-areas: "thumbnail contentstuff";
+    max-width: 1400px;
     margin-left: 10%;
     margin-right: 10%;
     margin-block: 20px;
@@ -689,5 +728,46 @@ section h1{
     color: var(--textAccent);
 }
 
+.waitMessage{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
 
+.loading{
+    display: flex;
+    gap: 1em;
+}
 
+.loading div{
+    width: 40px;
+    height: 40px;
+    background-color: var(--textAccent);
+    border-radius: 50%;
+    animation: load 3s steps(3) infinite;
+}
+
+.loading div:nth-child(1){
+    animation-delay: 1s;
+}
+
+.loading div:nth-child(2){
+    animation-delay: 2s;
+}
+
+.loading div:nth-child(3){
+    animation-delay: 3s;
+}
+
+@keyframes load {
+  0% {
+    opacity: 0.3;
+  }
+  100%{
+    opacity: 1;
+  }
+}
